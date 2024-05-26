@@ -60,9 +60,13 @@ export const Banner = () => {
               <span className="wrap">{text}</span>
             </h1>
             <p>
-              Lorem ipsum is a simple dummy text for printing and typesetting
-              industry. Lorem ipsum is a simple dummy text for printing and
-              typesetting industry.
+              After graduating from Petronas University of Technology, I made
+              the leap from earth science to computer science. My interesting
+              journey as such has been about endless learning and discovery.{" "}
+              <br />
+              <br />
+              This translates into my pursuit of new tech and writing code that
+              doesn't just work, but works brilliantly.
             </p>
             <button onClick={() => console.log("connect")}>
               Let's connect <ArrowRightCircle size={25} />
