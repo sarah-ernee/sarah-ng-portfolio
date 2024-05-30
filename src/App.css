@@ -1,5 +1,6 @@
-/* Custom Fonts */
+@import "react-tooltip/dist/react-tooltip.css";
 
+/* Custom Fonts */
 @font-face {
   font-family: Centra;
   src: url("./assets/font/CentraNo2-Bold.ttf");
@@ -269,7 +270,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 
+.tooltip {
+  border-radius: 10px;
+}
+
 /************ Banner Css ************/
+.logo-text {
+  color: white;
+  margin-left: 10px;
+  vertical-align: center;
+  margin-top: auto;
+}
+
 .banner {
   margin-top: 0;
   padding: 160px 0 100px 0;
