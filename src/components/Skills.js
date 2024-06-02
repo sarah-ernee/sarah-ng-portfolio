@@ -37,19 +37,19 @@ export const Skills = () => {
       slidesToSlide: 12,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1280 },
+      breakpoint: { max: 2999, min: 1280 },
       items: 8,
       slidesToSlide: 8,
     },
     tablet: {
-      breakpoint: { max: 1280, min: 960 },
+      breakpoint: { max: 1279, min: 800 },
       items: 6,
       slidesToSlide: 6,
     },
     mobile: {
-      breakpoint: { max: 960, min: 0 },
-      items: 4,
-      slidesToSlide: 4,
+      breakpoint: { max: 799, min: 0 },
+      items: 3,
+      slidesToSlide: 3,
     },
   };
 
@@ -61,8 +61,8 @@ export const Skills = () => {
             <div className="skill-bx">
               <h2>Skills</h2>
               <p>
-                Lorem ipsum is a simple dummy text for printing and typesetting
-                industry.
+                Here are some tools and technologies I've used to bring projects
+                to life.
               </p>
               <Carousel
                 responsive={responsive}

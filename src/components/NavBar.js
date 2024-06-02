@@ -3,7 +3,6 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { Tooltip } from "react-tooltip";
 
 import logo from "../assets/img/logo.svg";
-import { HiOutlineRocketLaunch } from "react-icons/hi2";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
@@ -85,7 +84,7 @@ export const NavBar = () => {
                 target="_blank"
                 rel="noreferrer"
                 data-tooltip-id="resumeTooltip"
-                data-tooltip-content="View CV"
+                data-tooltip-content="Resumé"
               >
                 <img src={navIcon1} alt="cv" />
               </a>

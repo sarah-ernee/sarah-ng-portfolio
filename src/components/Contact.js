@@ -5,12 +5,11 @@ import contactImg from "../assets/img/contact-img.svg";
 
 export const Contact = () => {
   const initialForm = {
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
-    phone: "",
     message: "",
   };
+
   const [formDetails, setFormDetails] = useState(initialForm);
   const [buttonText, setButtonText] = useState("Send");
   const [status, setStatus] = useState({});
@@ -21,9 +20,9 @@ export const Contact = () => {
       [category]: value,
     });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     setButtonText("Sending...");
     let response = await fetch("http://localhost:5000/contact", {
       method: "POST",
@@ -51,33 +50,25 @@ export const Contact = () => {
     <section className="contact" id="connect">
       <Container>
         <Row className="align-items-center">
-          <Col md={6}>
+          <Col md={6} sm={5}>
             <img src={contactImg} alt="Contact Me" />
           </Col>
 
-          <Col md={6}>
+          <Col md={6} sm={7}>
             <h2>Get In Touch</h2>
+
             <form onSubmit={handleSubmit}>
               <Row>
-                <Col sm={6} className="px-1">
+                <Col sm={12} md={10} className="px-1">
                   <input
                     type="text"
                     value={formDetails.firstName}
-                    placeholder="First Name"
+                    placeholder="Name"
                     onChange={(e) => onFormUpdate("firstName", e.target.value)}
                   />
                 </Col>
 
-                <Col sm={6} className="px-1">
-                  <input
-                    type="text"
-                    value={formDetails.lastName}
-                    placeholder="Last Name"
-                    onChange={(e) => onFormUpdate("lastName", e.target.value)}
-                  />
-                </Col>
-
-                <Col sm={6} className="px-1">
+                <Col sm={12} md={10} className="px-1">
                   <input
                     type="email"
                     value={formDetails.email}
@@ -86,16 +77,7 @@ export const Contact = () => {
                   />
                 </Col>
 
-                <Col sm={6} className="px-1">
-                  <input
-                    type="tel"
-                    value={formDetails.phone}
-                    placeholder="Phone Number"
-                    onChange={(e) => onFormUpdate("phone", e.target.value)}
-                  />
-                </Col>
-
-                <Col className="px-1">
+                <Col className="px-1" sm={12} md={10}>
                   <textarea
                     row="6"
                     value={formDetails.message}

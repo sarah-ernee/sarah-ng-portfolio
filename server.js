@@ -1,8 +1,8 @@
 // Importing dependencies
-import { express, Router, json } from "express";
-import { createTransport } from "nodemailer";
-import cors from "cors";
-
+const express = require("express");
+const { Router, json } = require("express");
+const { createTransport } = require("nodemailer");
+const cors = require("cors");
 const router = Router();
 
 // Setting up Express server that sends out emails
@@ -17,7 +17,7 @@ const contactEmail = createTransport({
   service: "gmail",
   auth: {
     user: "sarah.13997@gmail.com",
-    pass: "h%q4Rh3854RWpq*B", // two factor auth maybe preventing email being sent
+    pass: "rcae xunf nnne xjqa",
   },
 });
 
@@ -28,18 +28,16 @@ contactEmail.verify((error) => {
 
 // Handle client request aka form submission
 router.post("/contact", (req, res) => {
-  const name = req.body.firstName + req.body.lastName;
+  const name = req.body.name;
   const email = req.body.email;
   const message = req.body.message;
-  const phone = req.body.phone;
 
   const mail = {
     from: name,
     to: "sarah.13997@gmail.com",
-    subject: "Reach-out from Portfolio",
+    subject: "Hey there Sarah!",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
-           <p>Phone: ${phone}</p>
            <p>Message: ${message}</p>`,
   };
 

@@ -65,7 +65,7 @@ export const Banner = () => {
               {`I'm Sarah, `}{" "}
               <span
                 className="txt-rotate"
-                dataPeriod="1000"
+                dataperiod={1000}
                 data-rotate='[ "Fullstack Developer", "Software Engineer", "UI/UX Designer" ]'
               >
                 <span className="wrap">{text}</span>
@@ -84,8 +84,13 @@ export const Banner = () => {
             </button>
           </Col>
 
-          <Col xs={12} md={6} lg={5} xl={5}>
-            <img src={headerImg} alt="header" />
+          <Col
+            xs={{ span: 7, offset: 6 }}
+            md={{ span: 6, offset: 0 }}
+            lg={{ span: 5, offset: 0 }}
+            xl={{ span: 5, offset: 0 }}
+          >
+            <img src={headerImg} alt="header" className="img-fluid" />
           </Col>
         </Row>
       </Container>
