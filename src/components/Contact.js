@@ -32,10 +32,8 @@ export const Contact = () => {
       body: JSON.stringify(formDetails),
     });
     setButtonText("Send");
-    let result = response.json();
+    let result = await response.json();
 
-    // Clear the form
-    setFormDetails(formDetails);
     if (result.code === 200) {
       setStatus({ success: true, message: "Message sent successfully" });
     } else {
@@ -44,6 +42,9 @@ export const Contact = () => {
         message: "Something went wrong, please try again later",
       });
     }
+
+    // Clear the form
+    setFormDetails(initialForm);
   };
 
   return (
@@ -62,9 +63,9 @@ export const Contact = () => {
                 <Col sm={12} md={10} className="px-1">
                   <input
                     type="text"
-                    value={formDetails.firstName}
+                    value={formDetails.name}
                     placeholder="Name"
-                    onChange={(e) => onFormUpdate("firstName", e.target.value)}
+                    onChange={(e) => onFormUpdate("name", e.target.value)}
                   />
                 </Col>
 
