@@ -9,7 +9,8 @@ RUN npm install
 
 RUN npm run build
 
-# Stage 2: Serve the React app using an Nginx server
+# Nginx commonly used to serve static files - the asset images, HTML, CSS, JS files aka frontend
+# Load balancing, separation of concern where Node server can just handle backend
 FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
