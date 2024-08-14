@@ -402,7 +402,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0 auto 15px auto;
 }
 
-.background-image-left {
+.skill .background-image-left {
   top: 28%;
   position: absolute;
   bottom: 0;
@@ -421,6 +421,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 45px;
   font-weight: 700;
   text-align: center;
+
+  margin-top: -20px;
 }
 
 .project p {
@@ -431,20 +433,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 14px auto 30px auto;
   text-align: center;
   width: 56%;
+
+  margin-bottom: 60px;
 }
 
 .proj-card {
   position: relative;
-  align-self: center;
 }
 
 .proj-card img {
   border-radius: 10px;
   cursor: pointer;
-}
-
-.proj-card img:hover {
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .proj-text {
@@ -471,15 +470,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-text button:hover .redirect {
   margin-left: 25px;
-}
-
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
 }
 
 .chip {

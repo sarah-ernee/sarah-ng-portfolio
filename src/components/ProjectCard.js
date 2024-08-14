@@ -8,7 +8,7 @@ export const ProjectCard = ({ title, description, imgUrl, projUrl, tech }) => {
   }, [projUrl]);
 
   return (
-    <Col size={12} sm={6} md={4} xl={4} style={{ padding: 0 }}>
+    <Col size={12} sm={12} md={12} lg={6} xl={4} style={{ padding: 0 }}>
       <div className="proj-card">
         <img src={imgUrl} alt="" onClick={handleConnectClick} />
         <div className="proj-text">
