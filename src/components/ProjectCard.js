@@ -1,24 +1,31 @@
 import { Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { ArrowRightCircle } from "react-bootstrap-icons";
+import { useCallback } from "react";
 
-export const ProjectCard = ({ title, description, imgUrl, projUrl }) => {
+export const ProjectCard = ({ title, description, imgUrl, projUrl, tech }) => {
+  const handleConnectClick = useCallback(() => {
+    window.open(projUrl, "_blank", "noopener,noreferrer");
+  }, [projUrl]);
+
   return (
-    <Col>
-      <Link
-        to={projUrl}
-        className="link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="proj-imgbx">
-          <img src={imgUrl} alt="" />
+    <Col size={12} sm={6} md={4} xl={4} style={{ padding: 0 }}>
+      <div className="proj-card">
+        <img src={imgUrl} alt="" onClick={handleConnectClick} />
+        <div className="proj-text">
+          <button onClick={handleConnectClick}>
+            {title} <ArrowRightCircle className="redirect" size={18} />
+          </button>
+          <span>{description}</span>
 
-          <div className="proj-txtx">
-            <h4>{title}</h4>
-            <span>{description}</span>
+          <div className="tech-chips">
+            {tech.map((t, index) => (
+              <span key={index} className="chip">
+                {t}
+              </span>
+            ))}
           </div>
         </div>
-      </Link>
+      </div>
     </Col>
   );
 };

@@ -80,7 +80,7 @@ export const NavBar = () => {
           <span className="navbar-text">
             <div className="social-icon">
               <a
-                href="https://drive.google.com/file/d/1OLvJ4drZdXR-4Ri9d7TOybA_4LPbyLke/view?usp=sharing"
+                href="https://drive.google.com/file/d/1xbsfjJgDnGFI_N__VlhT3Kjm14--OKYw/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 data-tooltip-id="resumeTooltip"
