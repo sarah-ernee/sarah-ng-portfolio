@@ -27,8 +27,6 @@ import {
   BiCodeCurly,
 } from "react-icons/bi";
 
-import colorSharp from "../assets/img/color-sharp.png";
-
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -155,7 +153,11 @@ export const Skills = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-left" src={colorSharp} alt="" />
+      <img
+        className="background-image-left"
+        src="/color-sharp.png"
+        alt="gradient"
+      />
     </section>
   );
 };
