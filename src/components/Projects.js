@@ -32,8 +32,8 @@ export const Projects = () => {
             <Row
               style={{
                 marginLeft: "20px",
-                alignSelf: "center",
-                justifyContent: "center",
+                alignContent: "center",
+                justifyContent: "space-evenly",
               }}
             >
               {projects.map((project, index) => {
