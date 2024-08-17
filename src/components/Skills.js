@@ -26,6 +26,37 @@ import {
   BiLogoFigma,
   BiCodeCurly,
 } from "react-icons/bi";
+const skillsData = [
+  { icon: DiPython, name: "Python" },
+  { icon: DiJavascript, name: "Javascript" },
+  { icon: BiLogoTypescript, name: "Typescript" },
+  { icon: BiLogoGoLang, name: "Golang" },
+  { icon: DiHtml5, name: "HTML" },
+  { icon: DiCss3, name: "CSS" },
+  { icon: DiSass, name: "SCSS" },
+  { icon: BiLogoVuejs, name: "VueJS" },
+  { icon: DiReact, name: "ReactJS" },
+  { icon: DiNodejsSmall, name: "NodeJS" },
+  { icon: BiCodeCurly, name: "FastAPI" },
+  { icon: DiMongodb, name: "MongoDB" },
+  { icon: DiFirebase, name: "FirestoreDB" },
+  { icon: DiPostgresql, name: "Postgres" },
+  { icon: DiDocker, name: "Docker" },
+  { icon: DiGoogleCloudPlatform, name: "GCP" },
+  { icon: DiBitbucket, name: "Bitbucket" },
+  { icon: DiGit, name: "Git" },
+  { icon: BiLogoFigma, name: "Figma" },
+  { icon: DiAtlassian, name: "Agile Scrum" },
+];
+
+const SkillItem = ({ Icon, name }) => {
+  return (
+    <div className="item" aria-label={`${name} Skill`}>
+      <Icon color="white" size={80} />
+      <h6>{name}</h6>
+    </div>
+  );
+};
 
 export const Skills = () => {
   const responsive = {
@@ -68,86 +99,9 @@ export const Skills = () => {
                 infinite={true}
                 className="skill-slider"
               >
-                <div className="item" aria-label="Python Skill">
-                  <DiPython color="white" size={80} />
-                  <h5>Python</h5>
-                </div>
-                <div className="item" aria-label="Javascript Skill">
-                  <DiJavascript color="white" size={80} />
-                  <h5>Javascript</h5>
-                </div>
-                <div className="item" aria-label="Typescript Skill">
-                  <BiLogoTypescript color="white" size={80} />
-                  <h5>Typescript</h5>
-                </div>
-                <div className="item" aria-label="Golang Skill">
-                  <BiLogoGoLang color="white" size={80} />
-                  <h5>Golang</h5>
-                </div>
-                <div className="item" aria-label="HTML Skill">
-                  <DiHtml5 color="white" size={80} />
-                  <h5>HTML</h5>
-                </div>
-                <div className="item" aria-label="CSS Skill">
-                  <DiCss3 color="white" size={80} />
-                  <h5>CSS</h5>
-                </div>
-                <div className="item" aria-label="SCSS Skill">
-                  <DiSass color="white" size={80} />
-                  <h5>SCSS</h5>
-                </div>
-                <div className="item" aria-label="VueJS Skill">
-                  <BiLogoVuejs color="white" size={80} />
-                  <h5>VueJS</h5>
-                </div>
-                <div className="item" aria-label="ReactJS Skill">
-                  <DiReact color="white" size={80} />
-                  <h5>ReactJS</h5>
-                </div>
-                <div className="item" aria-label="NodeJS Skill">
-                  <DiNodejsSmall color="white" size={80} />
-                  <h5>NodeJS</h5>
-                </div>
-                <div className="item" aria-label="FastAPI Skill">
-                  <BiCodeCurly color="white" size={80} />
-                  <h5>FastAPI</h5>
-                </div>
-                <div className="item" aria-label="MongoDB Skill">
-                  <DiMongodb color="white" size={80} />
-                  <h5>MongoDB</h5>
-                </div>
-                <div className="item" aria-label="FirestoreDB Skill">
-                  <DiFirebase color="white" size={80} />
-                  <h5>FirestoreDB</h5>
-                </div>
-                <div className="item" aria-label="RDBMS Skill">
-                  <DiPostgresql color="white" size={80} />
-                  <h5>RDBMS</h5>
-                </div>
-                <div className="item" aria-label="Docker Skill">
-                  <DiDocker color="white" size={80} />
-                  <h5>Docker</h5>
-                </div>
-                <div className="item" aria-label="GCP Skill">
-                  <DiGoogleCloudPlatform color="white" size={80} />
-                  <h5>GCP</h5>
-                </div>
-                <div className="item" aria-label="Bitbucket Skill">
-                  <DiBitbucket color="white" size={80} />
-                  <h5>Bitbucket</h5>
-                </div>
-                <div className="item" aria-label="Git Skill">
-                  <DiGit color="white" size={80} />
-                  <h5>Git</h5>
-                </div>
-                <div className="item" aria-label="Figma Skill">
-                  <BiLogoFigma color="white" size={80} />
-                  <h5>Figma</h5>
-                </div>
-                <div className="item" aria-label="Agile Scrum Skill">
-                  <DiAtlassian color="white" size={80} />
-                  <h5>Agile Scrum</h5>
-                </div>
+                {skillsData.map((skill, index) => (
+                  <SkillItem key={index} Icon={skill.icon} name={skill.name} />
+                ))}
               </Carousel>
             </div>
           </Col>
@@ -161,3 +115,5 @@ export const Skills = () => {
     </section>
   );
 };
+
+export default Skills;
