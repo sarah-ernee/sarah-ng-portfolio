@@ -12,5 +12,5 @@ Project is dockerized and then deployed on Vercel.
 ## Future Implementation
 Some features that could be improved given more time would be the following:
 
-1. More robust project section since UI does not seem super cohesive with the rest of the webpage.
-2. Better mobile responsiveness down to different phone sizes.
+1. Refine project section to have the full list and more cohesive UI.
+3. Better mobile responsiveness.
